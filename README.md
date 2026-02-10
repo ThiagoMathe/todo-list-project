@@ -1,4 +1,4 @@
-# 📝 ToDo List API (Node.js + TypeScript)
+# 📝 Todo List Project
 
 Este projeto é uma API RESTful para gerenciamento de tarefas (ToDo List), desenvolvida com foco em escalabilidade e boas práticas de código utilizando **Node.js** e **TypeScript**.
 
@@ -17,10 +17,11 @@ O projeto segue uma arquitetura modular para facilitar a manutenção:
 ```text
 src/
 ├── controllers/  # Lógica de controle de entrada/saída (Requests/Responses)
-├── models/       # Definição de interfaces e tipos de dados
-├── routes/       # Definição das rotas e endpoints da API
-├── services/     # Regras de negócio e lógica complexa
 ├── database/     # Configuração e conexão com banco de dados
+├── middlewares/  # Funções intermediárias que interceptam requisições (auth, validações, logs, etc.)
+├── routes/       # Definição das rotas e endpoints da API
+├── schemas/      # Schemas de validação e tipagem de dados (ex: Zod, Joi, DTOs)
+├── services/     # Regras de negócio e lógica da aplicação
 └── server.ts     # Ponto de entrada da aplicação
 ```
 

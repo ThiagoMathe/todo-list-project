@@ -17,13 +17,12 @@ export function errorHandler(
   }
 
   // 2. Se for um erro que nós mesmos geramos (ex: "Tarefa não encontrada")
-  // Vamos tratar erros genéricos como 400 ou 404 dependendo da mensagem
   if (error instanceof Error) {
     return res.status(400).json({ message: error.message });
   }
 
   // 3. Se for algo que não conhecemos (Bug no código/banco), retorna 500
-  console.error(error); // Loga no terminal para o desenvolvedor ver
+  console.error(error);
   return res.status(500).json({
     status: 'error',
     message: 'Internal Server Error'

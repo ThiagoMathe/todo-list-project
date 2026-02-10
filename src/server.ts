@@ -13,5 +13,5 @@ app.use(router);
 app.use(errorHandler);
 
 app.listen(3000, () => {
-  console.log('🔥 Servidor (Modular) rodando em http://localhost:3000');
+  console.log('🔥 Servidor rodando em http://localhost:3000');
 });
